@@ -17,3 +17,12 @@ ALTER TABLE Patient_Table ADD CONSTRAINT chk_blood CHECK (blood_group IN ('A+','
 ALTER TABLE Patient_Table MODIFY first_name varchar(50) NOT NULL;
 ALTER TABLE Patient_Table MODIFY last_name varchar(50) NOT NULL;
 ALTER TABLE Patient_Table MODIFY dob DATE NOT NULL;
+create table Doctor_Table(
+patient_id Integer Primary Key,
+doctor_name varchar(100) NOT NULL,
+specialization varchar(50) NOT NULL,
+Contact_no Number UNIQUE,
+salary DECIMAL (10,2) DEFAULT 50000
+)
+desc Doctor_Table
+ALTER TABLE Doctor_Table ADD CONSTRAINT chk_salary CHECK (salary>=30000)
