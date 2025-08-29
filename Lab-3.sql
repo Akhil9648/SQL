@@ -100,3 +100,12 @@ WHERE dept_id = 106
 UPDATE dept1
 SET AFFLIATION='Accrediated'
 WHERE dept_id = 107
+SELECT emp_id, first_name
+FROM employee1
+WHERE first_name='Alice'
+SELECT * FROM dept1
+WHERE AFFLIATION='Non-accrediated'
+SELECT * FROM employee1
+WHERE Manager_id IS NULL
+SELECT * from dept1
+WHERE HOD_ID is NULL
